@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#009688</color>
+    <color name="purple_500">#FF3700B3</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="blacktrans">#40000000</color>
+    <color name="blue">#2566FF</color>
+    <color name="gray">#F1F1F1</color>
+    <color name="grayback">#F5F5F5</color>
+    <color name="grayback1">#F5F5F5</color>
+    <color name="colorGreen">#00b081</color>
+
+    <color name="walletbackground">#00000029</color>
+    <color name="support_open">#FF0707</color>
+    <color name="status">#FF3E3E</color>
+    <color name="support_close">#00BE52</color>
+    <color name="Buttonblack">#3E3E3E</color>
+    <color name="skipgray">#E4E4E4</color>
+    <color name="textgray">#9D9D9D</color>
+    <color name="btnred">#FF5722</color>
+    <color name="back">#FFF1BB</color>
+    <color name="indigator">#eeeeee</color>
+    <color name="green">#00be52</color>
+    <color name="red">#FF0000</color>
+
+    <color name="select_border">#707070</color>
+
+    <color name="select_border1">#E4E4E4</color>
+
+    <color name="seekbar_bg">#D5D5D5</color>
+
+    <color name="sub_text">#444444</color>
+    <color name="text3">#474747</color>
+
+    <!-- dots inactive color -->
+    <color name="dot_inactive_color">#515151</color>
+
+    <!-- dots active colors -->
+    <color name="dot_active_color">#000000</color>
+    <color name="chat_background">#F1F1F1</color>
+    <color name="new_grey">#f1f1f1</color>
+
+
+    <color name="color1">#28B463</color>
+    <color name="color2">#F4D03F</color>
+    <color name="color3">#E74C3C</color>
+    <color name="colorYellow">#FFEB3B</color>
+
+    <color name="coloriconp">#1E88E5</color>
+    <color name="coloricons">#64B5F6</color>
+
+    <color name="back_color1">#F1F1F1</color>
+    <color name="back_color2">#ECECEC</color>
+    <color name="back_color3">#EFEFEF</color>
+    <color name="back_color4">#F8F8F8</color>
+
+    <color name="card1">#F8F8F8</color>
+    <color name="card2">#E2E2E2</color>
+    <color name="cardColor1">#E9E9E9</color>
+    <color name="cardColor2">#F8F8F8</color>
+    <color name="bgBottomNavigation">#fe485a</color>
+    <color name="light_grey">#f1f1f1</color>
+</resources>

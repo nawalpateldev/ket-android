@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/home"
+            android:title="@string/home" />
+
+        <item
+            android:id="@+id/game_rate"
+            android:icon="@drawable/rate"
+            android:title="@string/game_rates" />
+
+        <item
+            android:icon="@drawable/history"
+            android:title="@string/game_history"
+            android:visible="false" />
+
+        <item
+            android:id="@+id/chart"
+            android:icon="@drawable/chart"
+            android:title="@string/chart" />
+
+        <item
+            android:icon="@drawable/setting"
+            android:title="@string/setting"
+            android:visible="false" />
+
+        <item
+            android:id="@+id/help"
+            android:icon="@drawable/help"
+            android:title="@string/help" />
+
+        <item
+            android:id="@+id/share"
+            android:icon="@drawable/share"
+            android:title="@string/share_app" />
+        <item
+            android:id="@+id/aboutUs"
+            android:icon="@drawable/about"
+            android:title="@string/about_us" />
+        <item
+            android:icon="@drawable/sheet"
+            android:title="@string/balance_sheet"
+            android:visible="false" />
+        <item
+            android:id="@+id/ticket"
+            android:icon="@drawable/sheet"
+            android:title="@string/view_ticket" />
+
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/logout"
+            android:title="@string/logout" />
+    </group>
+</menu>

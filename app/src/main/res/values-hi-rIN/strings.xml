@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">KET GROUP</string>
+    <string name="not_a_member_yet">Not a member yet?</string>
+    <string name="login_with_otp">Login With OTP</string>
+    <string name="login">Login</string>
+    <string name="register_to">Register To</string>
+    <string name="full_name">Full Name</string>
+    <string name="email_address">Email Address</string>
+    <string name="already_member">Already Member ?</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="enter_6_digit_otp">Enter 6 Digit OTP</string>
+    <string name="enter_otp_sent_on_your_mobile_no">Enter OTP sent on your mobile no.</string>
+    <string name="submit">Submit</string>
+    <string name="haven_t_received_otp">Haven\'t received OTP ?</string>
+    <string name="resend">Resend</string>
+
+    <string name="satta_matka">KET Group</string>
+    <string name="next">NEXT</string>
+    <string name="finish">FINISH</string>
+    <string name="earn_money">Earn Money</string>
+    <string name="lorem_ipsum_is_simply_dummy_text_of_the_printing_and_typesetting_industry_lorem_ipsum_has_been_the_industry_s_standard_dummy_text_ever_since_the_1500s">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s.</string>
+    <string name="welcome">Welcome</string>
+    <string name="skip_now">Skip Now</string>
+    <string name="login_into">Login into</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="home">Home</string>
+    <string name="wallet">Wallet</string>
+    <string name="change_password">Change Password</string>
+    <string name="profile">Profile</string>
+    <string name="game_rates">Game Rates</string>
+    <string name="game_history">Game History</string>
+    <string name="chart">Chart</string>
+    <string name="setting">Setting</string>
+    <string name="help">Help</string>
+    <string name="share_app">Share App</string>
+    <string name="about_us">About Us</string>
+    <string name="balance_sheet">Balance Sheet</string>
+    <string name="view_ticket">View Ticket</string>
+    <string name="logout">Logout</string>
+
+</resources>
