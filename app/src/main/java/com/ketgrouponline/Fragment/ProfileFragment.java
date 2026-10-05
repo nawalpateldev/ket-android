@@ -26,9 +26,13 @@ public class ProfileFragment extends Fragment {
         mobile = view.findViewById(R.id.mobile);
         email = view.findViewById(R.id.email);
 
-        name.setText(MySharedPreferences.getInstance(getContext()).getKey(SPCsnstants.NAME_KEY));
-        mobile.setText(MySharedPreferences.getInstance(getContext()).getKey(SPCsnstants.MOBILE_KEY));
-        email.setText(MySharedPreferences.getInstance(getContext()).getKey(SPCsnstants.EMAIL_KEY));
+        String nameStr = MySharedPreferences.getInstance(getContext()).getKey(SPCsnstants.NAME_KEY);
+        String mobileStr = MySharedPreferences.getInstance(getContext()).getKey(SPCsnstants.MOBILE_KEY);
+        String emailStr = MySharedPreferences.getInstance(getContext()).getKey(SPCsnstants.EMAIL_KEY);
+
+        name.setText(nameStr != null && !nameStr.equalsIgnoreCase("null") ? nameStr : "");
+        mobile.setText(mobileStr != null && !mobileStr.equalsIgnoreCase("null") ? mobileStr : "");
+        email.setText(emailStr != null && !emailStr.equalsIgnoreCase("null") ? emailStr : "");
 
         return view;
     }

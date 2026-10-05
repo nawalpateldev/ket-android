@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
+import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.ketgrouponline.Network.MyApplication;
@@ -82,7 +83,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private void login(String username, String password) {
         MyUtils.showProgressDialog(LoginActivity.this, false);
-        StringRequest request = new StringRequest(Request.Method.POST, Endpoints.login, new com.android.volley.Response.Listener<String>() {
+        StringRequest request = new StringRequest(Request.Method.POST, Endpoints.login, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 MyUtils.dismisProgressDialog();
@@ -91,11 +92,11 @@ public class LoginActivity extends AppCompatActivity {
                     JSONObject rootObject = new JSONObject(response);
                     if (rootObject.getBoolean("return")) {
                         JSONObject object = rootObject.getJSONObject("data");
-                        MyApplication.sharedPreferences.setKey(SPCsnstants.api_token, object.getString("api_token"));
-                        MyApplication.sharedPreferences.setKey(SPCsnstants.ID_KEY, object.getString("id"));
-                        MyApplication.sharedPreferences.setKey(SPCsnstants.NAME_KEY, object.getString("name"));
-                        MyApplication.sharedPreferences.setKey(SPCsnstants.EMAIL_KEY, object.getString("email"));
-                        MyApplication.sharedPreferences.setKey(SPCsnstants.MOBILE_KEY, object.getString("mobile"));
+                        MyApplication.sharedPreferences.setKey(SPCsnstants.api_token, getJsonString(object, "api_token"));
+                        MyApplication.sharedPreferences.setKey(SPCsnstants.ID_KEY, getJsonString(object, "id"));
+                        MyApplication.sharedPreferences.setKey(SPCsnstants.NAME_KEY, getJsonString(object, "name"));
+                        MyApplication.sharedPreferences.setKey(SPCsnstants.EMAIL_KEY, getJsonString(object, "email"));
+                        MyApplication.sharedPreferences.setKey(SPCsnstants.MOBILE_KEY, getJsonString(object, "mobile"));
                         Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                         startActivity(intent);
@@ -105,7 +106,7 @@ public class LoginActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
             }
-        }, new com.android.volley.Response.ErrorListener() {
+        }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 MyUtils.dismisProgressDialog();
@@ -172,7 +173,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private void loginWithOtp(String mobile) {
         MyUtils.showProgressDialog(LoginActivity.this, false);
-        StringRequest request = new StringRequest(Request.Method.POST, Endpoints.login_with_otp, new com.android.volley.Response.Listener<String>() {
+        StringRequest request = new StringRequest(Request.Method.POST, Endpoints.login_with_otp, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 MyUtils.dismisProgressDialog();
@@ -186,7 +187,7 @@ public class LoginActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
             }
-        }, new com.android.volley.Response.ErrorListener() {
+        }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 MyUtils.dismisProgressDialog();
@@ -211,7 +212,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private void resendOtp(String mobile) {
         MyUtils.showProgressDialog(LoginActivity.this, false);
-        StringRequest request = new StringRequest(Request.Method.POST, Endpoints.login_with_otp, new com.android.volley.Response.Listener<String>() {
+        StringRequest request = new StringRequest(Request.Method.POST, Endpoints.login_with_otp, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 MyUtils.dismisProgressDialog();
@@ -225,7 +226,7 @@ public class LoginActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
             }
-        }, new com.android.volley.Response.ErrorListener() {
+        }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 MyUtils.dismisProgressDialog();
@@ -250,7 +251,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private void verifyOtp(String mobile, String otp) {
         MyUtils.showProgressDialog(LoginActivity.this, false);
-        StringRequest request = new StringRequest(Request.Method.POST, Endpoints.verify_otp, new com.android.volley.Response.Listener<String>() {
+        StringRequest request = new StringRequest(Request.Method.POST, Endpoints.verify_otp, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 MyUtils.dismisProgressDialog();
@@ -259,11 +260,11 @@ public class LoginActivity extends AppCompatActivity {
                     JSONObject rootObject = new JSONObject(response);
                     if (rootObject.getBoolean("return")) {
                         JSONObject object = rootObject.getJSONObject("data");
-                        MyApplication.sharedPreferences.setKey(SPCsnstants.api_token, object.getString("api_token"));
-                        MyApplication.sharedPreferences.setKey(SPCsnstants.ID_KEY, object.getString("id"));
-                        MyApplication.sharedPreferences.setKey(SPCsnstants.NAME_KEY, object.getString("name"));
-                        MyApplication.sharedPreferences.setKey(SPCsnstants.EMAIL_KEY, object.getString("email"));
-                        MyApplication.sharedPreferences.setKey(SPCsnstants.MOBILE_KEY, object.getString("mobile"));
+                        MyApplication.sharedPreferences.setKey(SPCsnstants.api_token, getJsonString(object, "api_token"));
+                        MyApplication.sharedPreferences.setKey(SPCsnstants.ID_KEY, getJsonString(object, "id"));
+                        MyApplication.sharedPreferences.setKey(SPCsnstants.NAME_KEY, getJsonString(object, "name"));
+                        MyApplication.sharedPreferences.setKey(SPCsnstants.EMAIL_KEY, getJsonString(object, "email"));
+                        MyApplication.sharedPreferences.setKey(SPCsnstants.MOBILE_KEY, getJsonString(object, "mobile"));
                         Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                         startActivity(intent);
@@ -273,7 +274,7 @@ public class LoginActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
             }
-        }, new com.android.volley.Response.ErrorListener() {
+        }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 MyUtils.dismisProgressDialog();
@@ -295,5 +296,13 @@ public class LoginActivity extends AppCompatActivity {
                 DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
                 DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
         MyApplication.mRequestQue.add(request);
+    }
+
+    private String getJsonString(JSONObject object, String key) {
+        if (object != null && object.has(key) && !object.isNull(key)) {
+            String val = object.optString(key, "");
+            return val.equalsIgnoreCase("null") ? "" : val;
+        }
+        return "";
     }
 }

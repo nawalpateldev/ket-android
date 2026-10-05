@@ -75,7 +75,7 @@ public class DashboardActivity extends AppCompatActivity {
         email = header.findViewById(R.id.email);
 
         String userName = MySharedPreferences.getInstance(DashboardActivity.this).getKey(SPCsnstants.NAME_KEY);
-        if (userName != null && !userName.isEmpty()) {
+        if (userName != null && !userName.isEmpty() && !userName.equalsIgnoreCase("null")) {
             String firstLetter = userName.substring(0, 1).toUpperCase();
             String remainingLetters = userName.substring(1);
             name.setText(firstLetter + remainingLetters);
@@ -83,7 +83,11 @@ public class DashboardActivity extends AppCompatActivity {
             name.setText("");
         }
         String userEmail = MySharedPreferences.getInstance(DashboardActivity.this).getKey(SPCsnstants.EMAIL_KEY);
-        email.setText(userEmail != null ? userEmail : "");
+        if (userEmail != null && !userEmail.isEmpty() && !userEmail.equalsIgnoreCase("null")) {
+            email.setText(userEmail);
+        } else {
+            email.setText("");
+        }
         Fragment fragment;
         fragment = new HomeFragment();
         getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment, fragment, "home").commit();
